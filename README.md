@@ -46,6 +46,29 @@ export default {
 ```
 node >> don't forget restart your application
 
+### add material tailwind
+
+1. 
+```bash 
+npm i @material-tailwind/react
+```
+2. change tailwind.config.js 
+
+```bash 
+/** @type {import('tailwindcss').Config} */
+import withMT from "@material-tailwind/react/utils/withMT";
+
+export default withMT({
+  # content: [],
+  # theme: {
+  #   extend: {},
+  # },
+  # plugins: [],
+});
+
+
+```
+
 ----------------------------------------------------------------
 
 
