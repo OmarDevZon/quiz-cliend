@@ -1,31 +1,73 @@
-# React + TypeScript + Vite
+quiz server git repository ==> https://github.com/omar-web-dev-2/quiz-server.git 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+------------------------------------------------------------
+### how to create a new vite application using ts.
+1.
+```bash 
+npm create vite 
 ```
+2. enter a project name 
+3. select the formwork 
+4. select the language
+5. 
+```bash 
+npm install
+```
+----------------------------------------------------------------
+### how can add tailwind css with postcss (vite)
+1. 
+```bash
+npm install -D tailwindcss postcss autoprefixer
+```
+2. 
+```bash 
+npx tailwindcss init -p
+``` 
+3. tailwind.config.js file changes (remove all code)
+```bash 
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+``` 
+4. index.css changes (remove all code )
+```bash 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+node >> don't forget restart your application
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# quiz-cliend
+----------------------------------------------------------------
+
+
+
+
+
+
+----------------------------------------------------------------
+### My file structure
+```bash 
+----src
+----|----component
+----|----|----layouts
+----|----|----ui
+----|----pages
+----|----routes
+----|----|----store.tsx
+----|----|----features
+----|----|----|----counterState.tsx
+----|----redux
+----|----utils
+----|----context
+----|----hooks
+```
+----------------------------------------------------------------
