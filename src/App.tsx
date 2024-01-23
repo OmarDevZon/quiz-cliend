@@ -1,9 +1,12 @@
 import "./App.css";
+import { NavbarComponent } from "./components/Navbar";
+import { TabsDefault } from "./components/Taps";
 
-export const App= () => {
+export const App = () => {
   return (
-    <>
-      <div className="text-red-500"> This is a App </div>
-    </>
+    <div className="container mx-auto">
+      <NavbarComponent></NavbarComponent>
+      <TabsDefault></TabsDefault>
+    </div>
   );
 };
